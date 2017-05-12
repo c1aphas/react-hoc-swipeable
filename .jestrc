@@ -1,0 +1,21 @@
+{
+  "verbose": true,
+  "setupFiles": [
+    "<rootDir>/test/setup.js"
+  ],
+  "roots": [
+    "<rootDir>/test/"
+  ],
+  "testMatch": [
+    "**/*.test.js"
+  ],
+  "moduleNameMapper": {
+    "^components$": "<rootDir>/src/components"
+  },
+  "modulePaths": [
+    "src"
+  ],
+  "globals": {
+    "__CLIENT__": true
+  }
+}

@@ -1,0 +1,113 @@
+extends: eslint-config-airbnb
+parser: babel-eslint
+env:
+  browser: true
+  node: true
+plugins:
+  - react
+  - babel
+globals:
+  expect: true
+  it: true
+  test: true
+  __DEV__: true
+  __CLIENT__: true
+  __SERVER__: true
+  __DISABLE_SSR__: true
+  __DEVTOOLS__: true
+  socket: true
+  webpackIsomorphicTools: true
+ecmaFeatures:
+  modules: true
+  jsx: true
+  forOf: true
+  blockBindings: true
+  arrowFunctions: true
+  classes: true
+  defaultParams: true
+  destructuring: true
+  generators: true
+  restParams: true
+  spread: true
+  superInFunctions: true
+  templateStrings: true
+  experimentalObjectRestSpread: true
+rules:
+  indent:
+    - error
+    - 2
+    - SwitchCase: 1
+  no-var: error
+  prefer-const: error
+  newline-per-chained-call:
+    - error
+    - ignoreChainWithDepth: 3
+  no-unused-vars:
+    - error
+    - varsIgnorePattern: ^_
+      argsIgnorePattern: ^_
+  no-unused-expressions:
+    - error
+    - allowShortCircuit: true
+  comma-dangle:
+    - error
+    - always-multiline
+  new-cap:
+    - error
+    - properties: true
+      capIsNewExceptions:
+        - CSSModules
+  array-bracket-spacing: 0
+  babel/array-bracket-spacing:
+    - warn
+    - never
+  object-curly-spacing: 0
+  babel/object-curly-spacing:
+    - warn
+    - never
+  space-before-function-paren:
+    - warn
+    - never
+  no-multi-spaces:
+    - warn
+    - exceptions:
+        VariableDeclarator: true
+  key-spacing:
+    - warn
+    - singleLine:
+        beforeColon: false
+        afterColon: true
+      multiLine:
+        beforeColon: false
+        afterColon: true
+        align: value
+  no-ternary: 0
+  consistent-return: 0
+  no-continue: 0
+  no-confusing-arrow: 0
+  no-return-assign: 0
+  no-param-reassign: 0
+  spaced-comment: 0
+  func-names: 0
+  no-console:
+    - warn
+    - allow:
+      - warn
+      - error
+  no-alert:    warn
+  no-debugger: error
+  react/require-extension: 0
+  react/forbid-prop-types: 0
+  react/prefer-stateless-function: 0
+  react/jsx-filename-extension: 0
+  react/self-closing-comp:
+    - warn
+    - component: true
+      html: false
+  import/extensions: 0
+  import/no-unresolved: 0
+  import/no-extraneous-dependencies: 0
+  import/no-named-as-default-member: 0
+  babel/generator-star-spacing: 0
+  generator-star-spacing: 0
+  jsx-a11y/img-has-alt: 0
